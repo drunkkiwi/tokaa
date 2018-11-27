@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ unique_article.article_title }}{% endblock %}
+
+{% block css %}
+
+<link href="{% static 'home/css/article_view.css' %}" rel="stylesheet">
+<link href="{% static 'home/css/article_view700.css' %}" media="screen and (min-width: 0px) and (max-width: 700px)" rel="stylesheet">
+
+
+{% endblock %}
+
+{% block body %}
+  <div class="full-wrapper">
+    <div class="full-article-left">
+      <div class="article-photo-div">
+
+        <img class="left-article-patt" src="{% static 'home/media/left-article-pattern.png' %}">
+
+        <div style="background-image:url({{ unique_article.article_image.url }})" class="article-photo">
+        </div>
+
+      </div>
+
+      <div class="article-text">
+
+        <div class="article-title">
+          <p class="article-title-p">
+            {{ unique_article.article_title}}
+          </p>
+
+          <span class="author-name">
+            {{ unique_article.article_author}} -- {{ unique_article.article_created_at|timesince }} më parë
+          </span>
+          <span class="article-views">
+            {{ unique_article.article_views }} {% if unique_article.article_views == 1 %} shikim {% else %} shikime {% endif %}
+          </span>
+        </div>
+
+        <div class="article-body">
+          <p class="article-body-p">
+            {{ unique_article.article_body }}
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="suggested-articles-right">
+
+      {% for c_article in all_category_articles %}
+      <div class="c_article-body">
+
+        <div class="c_article-photo" style="background-image: url({{ c_article.article_image.url }})">
+        </div>
+        <div class="c_article-text">
+          <div class="c_article-title">
+            <a href="{% url 'home:article_view' c_article.article_slug %}">
+              <p class="c_article-title-p">{{ c_article.article_title|truncatewords:10 }}</p>
+            </a>
+          </div>
+          <div class="c_article-par">
+            <p class="c_article-par-p">
+              {{ c_article.article_body|truncatewords:15 }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+{% endblock %}

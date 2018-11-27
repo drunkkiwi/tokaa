@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Flakë {% endblock %}
+
+{% block F-underbar %}underbar-up{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/css/flake_view.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/article_box.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/article_box700.css' %}" media="screen and (min-width: 0px) and (max-width: 700px)">
+
+<style>
+  :root {
+    --main-highlight-color: var(--H-main-color);
+  }
+</style>
+{% endblock %}
+
+{% block body %}
+
+<div class="c-explan">
+  <span class="c-explan-s">LAJMET MË TË SHIKUARA</span>
+
+  <form class="sort-explan-div" action="{% url 'home:flake_view' %}" method="GET">
+    <select class="sort-explan" onchange="this.form.submit()" name="d">
+      <option value="" disabled selected hidden>
+        {{ brendawhat }}
+      </option>
+      <option value="1">Brenda ditës</option>
+      <option value="7">Brenda javës</option>
+      <option value="31">Brenda muajit</option>
+    </select>
+
+  </form>
+</div>
+
+
+{% for Article in Articles %}
+
+{% include 'home/article_box.html' %}
+
+{% endfor %}
+
+{% include 'home/paginator_display.html' %}
+
+
+{% endblock %}

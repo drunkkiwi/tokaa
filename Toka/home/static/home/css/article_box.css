@@ -1,0 +1,171 @@
+/* ==================== Articles ======================= */
+
+.article {
+  min-height: 300px;
+  display: flex;
+
+  background-color: var(--secondary-background-color);
+
+  box-sizing: border-box;
+  padding: 20px;
+
+  position: relative;
+  border-bottom: 2px solid var(--terciary-background-color);
+}
+
+.article-photo-div {
+  min-height: 100%;
+  flex: 2;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.article-photo {
+  min-height: 100%;
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.png-divider {
+  position: absolute;
+  right: 0px;
+  max-height: 100%;
+}
+
+.views-info {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 10px;
+  color: var(--main-highlight-color);
+}
+
+.views-p {
+  font-size: 16px;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.article-info {
+  min-height: 100%;
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title-info {
+  padding: 0 20px 20px 20px;
+  border-bottom: 2px solid var(--terciary-background-color);
+}
+
+.title-p {
+  color: var(--main-text-color);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.body-info {
+  padding: 20px;
+}
+
+.body-p {
+  color: var(--main-text-color);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.author-info {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.author-p {
+  font-size: 14px;
+  color: var(--main-highlight-color);
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.aut-icon {
+  font-size: 0.9rem;
+  color: var(--main-highlight-color);
+}
+
+.left-line {
+  height: 100%;
+  min-width: 3px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: var(--main-highlight-color);
+  z-index: 99;
+}
+
+.time-info {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-highlight-color);
+}
+
+.clock-icon {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+
+.clock-p {
+  font-size: 16px;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.pag-reference-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pag-reference {
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--secondary-background-color);
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pag-icon {
+  color: var(--main-text-color);
+  font-size: 18px;
+  margin: 0 10px 0 0;
+}
+
+.pir {
+  margin: 0 0 0 10px;
+}
+
+.pag-current {
+  color: var(--main-text-color);
+  font-size: 18px;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.act-pg {
+  color: var(--main-highlight-color);
+  font-family: 'Chakra Petch', sans-serif;
+}

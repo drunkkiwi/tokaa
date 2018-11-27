@@ -1,0 +1,218 @@
+* {
+  padding: 0px;
+  margin: 0px;
+
+  /*font-family: 'Raleway', sans-serif;*/
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+a:link, a:hover {
+  text-decoration: none;
+}
+
+:root {
+  /* MAIN WEBSITE COLORS */
+
+
+  --main-background-color: #141414;
+  --secondary-background-color: #191919;
+  --terciary-background-color: #1f1f1f;
+
+  --darker-background-color: #151515;
+  --lighter-background-color: #2b2b2b;
+  --lightest-background-color: #3b3b3b;
+
+  --main-website-highlight-color: #cb0056;
+  --main-highlight-color: #cb0056;
+  --secondary-highlight-color: #c53572;
+  --terciary-highlight-color: honeydew;
+
+
+  --dark-highlight-color: #1c3e71;
+  --jocker-color: #eeeeee;
+
+  /* TEXT COLOR */
+  --main-text-color: #e1e1e1;
+
+  /* CATEGORIES COLORS */
+
+  --LN-main-color: var(--main-website-highlight-color);
+  --P-main-color: #0017FF;
+  --H-main-color: #E8004D; /*#FF112C;*/
+  --E-main-color: #00FF98;
+
+}
+
+body {
+  background-color: var(--main-background-color);
+  padding-top: 55px;
+}
+
+
+/* ############## Navigation bar #################### */
+
+.navigation {
+  height: 55px;
+  max-height: 55px;
+  background-color: var(--darker-background-color);
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  position: fixed;
+  min-width: 100%;
+  z-index: 100;
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+.left-logo-div {
+  float: left;
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5px 0 5px 10px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.left-logo {
+  height: 100%;
+  max-height: 70px;
+}
+
+.options {
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.full-option {
+  padding: 2px 8px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon {
+  color: var(--main-highlight-color);
+  color: var(--main-text-color);
+  padding-left: 15px;
+}
+
+.option {
+  font-size: 1em;
+  margin: 0 10px;
+  padding: 5px;
+  text-transform: lowercase;
+  font-weight: 300;
+  color: var(--main-text-color);
+}
+
+.underbar {
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background-color: var(--terciary-highlight-color);
+}
+
+.full-option:hover .underbar {
+  height: 7px;
+}
+
+.underbar-up {
+  height: 7px;
+  width: 100%;
+}
+
+.full-option:hover {
+  background-color: var(--secondary-background-color);
+}
+
+/* ============ Underbar Colors ============*/
+
+.catco-ln {
+  background-color: var(--LN-main-color);
+}
+.catco-h {
+  background-color: var(--H-main-color);
+}
+.catco-p {
+  background-color: var(--P-main-color);
+}
+.catco-e {
+  background-color: var(--E-main-color);
+}
+
+/* ============= FOOTER ============== */
+
+.footer {
+  box-sizing: border-box;
+  padding: 30px;
+  text-align: center;
+}
+
+.foot-logo-img {
+  max-height: 80px;
+  filter: grayscale(100%);
+}
+
+.foot-content {
+  padding: 30px 0;
+}
+
+.foot-options {
+  text-decoration: none;
+  text-align: center;
+  list-style: none;
+}
+
+.foot-options li, .foot-options li a, .foot-options li a:hover, .foot-options li a:focus {
+  display: inline;
+  color: var(--main-text-color);
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+.foot-warning {
+  padding: 10px;
+  word-break: break-all;
+  font-size: 0.6em;
+  color: var(--main-text-color);
+}
+
+
+
+/* =============== WEBKIT SCROLLBAR =====================*/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--darker-background-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--lighter-background-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lightest-background-color);
+}

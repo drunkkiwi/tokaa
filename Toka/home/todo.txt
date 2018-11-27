@@ -1,0 +1,3 @@
+Todo:
+
+Add functionality of hot news for different time spans.

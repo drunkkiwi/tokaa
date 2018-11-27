@@ -1,0 +1,29 @@
+.c-explan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.c-explan-s {
+  padding: 5px 12px;
+  background-color: var(--secondary-background-color);
+  color: var(--main-highlight-color);
+}
+
+.sort-explan-div {
+  margin: 20px 0;
+}
+
+.sort-explan {
+  padding: 5px 12px;
+  background-color: var(--secondary-background-color);
+  color: var(--main-highlight-color);
+  border: 1px solid var(--terciary-background-color);
+  outline-color: var(--main-highlight-color);
+}
+
+.sort-explan option:hover {
+  background-color: var(--terciary-background-color);
+}

@@ -1,0 +1,35 @@
+.about-wrapper {
+  background-color: var(--secondary-background-color);
+}
+
+.about-title {
+  text-align: center;
+  padding: 40px 0 0 0;
+}
+
+.about-sp {
+  box-sizing: border-box;
+  font-size: 20px;
+  color: var(--main-highlight-color);
+  text-align: center;
+  font-weight: 500;
+  padding: 3px 10px;
+  background-color: var(--main-background-color);
+}
+
+.about-message {
+  padding: 30px;
+}
+
+.t431 {
+  box-sizing: border-box;
+  font-size: 16px;
+  color: var(--main-text-color);
+  padding: 16px 22px;
+  background-color: var(--main-background-color);
+}
+
+.emph {
+  color: var(--main-highlight-color);
+  font-size: 16px;
+}

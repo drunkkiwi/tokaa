@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <title>TOKA | {% block title %}{% endblock %}</title>
+
+    <!-- icon -->
+    <link href="{% static 'home/media/faviconn.png' %}" rel="shortcut icon" type="image/png" >
+
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- external -->
+    <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet"  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- default fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'home/base.css' %}">
+    <link href="{% static 'home/base800.css' %}" rel="stylesheet" media='screen and (min-width: 0px) and (max-width: 800px)'>
+    {% block css %}
+
+    {% endblock %}
+
+  </head>
+  <body>
+
+
+    <div class="navigation">
+
+      <div class="left-logo-div">
+        <a href="{% url 'home:home' %}"><img class="left-logo" src="{% static 'home/media/full-logo-2.png' %}"></a>
+      </div>
+
+      <div class="options">
+
+        <a href="{% url 'home:home' %}" class="full-option">
+          <i class="fas fa-plane nav-icon"></i>
+          <span class="option">Lajmet e fundit</span>
+          <div class="underbar catco-ln {% block home-underbar %}{% endblock %}"></div>
+        </a>
+
+        <a href="{% url 'home:flake_view' %}" class="full-option">
+          <i class="fas fa-fire nav-icon"></i>
+          <span class="option">Flakë</span>
+          <div class="underbar catco-h {% block F-underbar %}{% endblock %}"></div>
+        </a>
+
+        <a href="{% url 'home:category_view' 'P' %}" class="full-option">
+          <i class="fas fa-chess-knight nav-icon"></i>
+          <span class="option">Politikë</span>
+          <div class="underbar catco-p {% block P-underbar %}{% endblock %}"></div>
+        </a>
+
+        <a href="{% url 'home:category_view' 'E' %}" class="full-option">
+          <i class="fas fa-glass-martini nav-icon"></i>
+          <span class="option">Argëtim</span>
+          <div class="underbar catco-e {% block E-underbar %}{% endblock %}"></div>
+        </a>
+
+      </div>
+
+    </div>
+
+    {% block body %}
+
+    {% endblock %}
+
+  <div class="footer">
+    <div class="foot-logo">
+      <img class="foot-logo-img" src="{% static 'home/media/full-logo-2.png' %}">
+    </div>
+    <div class="foot-content">
+
+      <p class="foot-warning">
+          Ky website nuk është i krijuar per persona
+          nën moshën 18 vjeqare.
+      </p>
+
+    </div>
+
+
+
+    {% block js %}
+    {% endblock %}
+  </body>
+</html>

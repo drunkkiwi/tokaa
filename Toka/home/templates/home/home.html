@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Ballina {% endblock %}
+
+{% block home-underbar %}underbar-up{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/css/article_box.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/article_box700.css' %}" media="screen and (min-width: 0px) and (max-width: 700px)">
+{% endblock %}
+
+{% block body %}
+
+
+{% for Article in Articles %}
+
+{% include 'home/article_box.html' %}
+
+{% endfor %}
+
+{% include 'home/paginator_display.html' %}
+
+
+{% endblock %}

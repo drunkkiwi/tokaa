@@ -1,0 +1,141 @@
+.full-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.full-article-left {
+  flex: 6;
+}
+
+.article-text {
+  height: auto;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: var(--secondary-background-color);
+}
+
+.article-photo-div {
+  overflow: hidden;
+}
+
+.article-photo {
+  height: 400px;
+  min-height: 400px;
+  min-width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.article-title {
+  box-sizing: border-box;
+  padding: 0 0px 35px 0px;
+  border-bottom: 1px solid var(--main-highlight-color);
+  position: relative;
+}
+
+.article-title-p {
+  font-size: 22px;
+  color: var(--main-text-color);
+}
+
+.author-name {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 5px 12px;
+  font-size: 14px;
+  /*background-color: var(--main-highlight-color);*/
+  color: var(--main-highlight-color);
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.article-views {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  padding: 5px;
+  font-size: 14px;
+  color: var(--main-highlight-color);
+  font-weight: 700;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.article-body {
+  height: auto;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+
+.article-body-p {
+  font-size: 18px;
+  color: var(--main-text-color);
+}
+
+.article-photo-div {
+  position: relative;
+}
+
+.left-article-patt {
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  min-height: 100%;
+  z-index: 99;
+}
+
+.suggested-articles-right {
+  flex: 3;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* ~~~~~~~~~~~ Articles in the right ~~~~~~~~~~~~~~~~~~~*/
+
+.c_article-body {
+  background-color: var(--secondary-background-color);
+  border-bottom: 1px solid var(--terciary-background-color);
+  height: 150px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.c_article-photo {
+  height: 150px;
+  flex: 5;
+  background-size: cover;
+  background-position: center;
+}
+
+.c_article-text {
+  height: 100%;
+  min-height: 100%;
+  flex: 8;
+  box-sizing: border-box;
+}
+
+.c_article-title {
+  padding: 10px 10px 0 10px;
+}
+
+.c_article-title-p {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--main-highlight-color);
+  color: var(--main-text-color);
+  font-size: 16px;
+}
+
+.c_article-par {
+  padding: 10px;
+}
+
+.c_article-par-p {
+  color: var(--main-text-color);
+  font-size: 14px;
+}

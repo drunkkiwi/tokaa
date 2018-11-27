@@ -1,0 +1,35 @@
+{% load static %}
+<div class="article">
+
+  <div class="article-photo-div">
+    <div class="article-photo" style="background-image: url({{ Article.article_image.url }})">
+      <img class="png-divider" src="{% static 'home/media/right-article-pattern.png' %}">
+      <div class="views-info">
+        <p class="views-p">{{ Article.article_views }} {% if Article.article_views == 1%} shikim {% else %} shikime {% endif %}</p>
+      </div>
+    </div>
+    <div class="left-line" style="background-color: var(--{{ Article.article_category }}-main-color)"></div>
+  </div>
+
+  <div class="article-info">
+    <a href="{% url 'home:article_view' Article.article_slug %}" class="title-info">
+      <p class="title-p">{{ Article.article_title }}</p>
+    </a>
+
+    <div class="body-info">
+      <p class="body-p">{{ Article.article_body|truncatewords:60 }}</p>
+    </div>
+
+    <div class="time-info">
+      <i class="fas fa-clock clock-icon"></i>
+      <p class="clock-p">{{ Article.article_created_at|timesince }} më parë</p>
+    </div>
+
+    <div class="author-info">
+      <span class="aut-icon"><i class="fas fa-id-badge"></i></span>
+      <p class="author-p">{{ Article.article_author }}</p>
+    </div>
+  </div>
+
+
+</div>
