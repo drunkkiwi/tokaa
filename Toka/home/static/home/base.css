@@ -2,7 +2,6 @@
   padding: 0px;
   margin: 0px;
 
-  /*font-family: 'Raleway', sans-serif;*/
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
 
@@ -27,13 +26,14 @@ a:link, a:hover {
   --lightest-background-color: #3b3b3b;
 
   --main-website-highlight-color: #cb0056;
+
   --main-highlight-color: #cb0056;
-  --secondary-highlight-color: #c53572;
-  --terciary-highlight-color: honeydew;
 
 
   --dark-highlight-color: #1c3e71;
   --jocker-color: #eeeeee;
+
+  --neutral-main-color: #888;
 
   /* TEXT COLOR */
   --main-text-color: #e1e1e1;

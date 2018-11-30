@@ -1,3 +1,28 @@
 .full-wrapper {
   flex-direction: column;
 }
+
+.article-title {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+}
+
+.article-title-p {
+  font-size: 26px;
+}
+
+.author-name, .article-views {
+  position: relative;
+  padding: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.author-name {
+  padding-top: 15px;
+}

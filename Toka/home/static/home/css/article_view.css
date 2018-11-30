@@ -5,6 +5,7 @@
 
 .full-article-left {
   flex: 6;
+  background-color: var(--secondary-background-color);
 }
 
 .article-text {
@@ -12,7 +13,6 @@
   min-width: 100%;
   box-sizing: border-box;
   padding: 20px;
-  background-color: var(--secondary-background-color);
 }
 
 .article-photo-div {
@@ -46,7 +46,6 @@
   bottom: 0px;
   padding: 5px 12px;
   font-size: 14px;
-  /*background-color: var(--main-highlight-color);*/
   color: var(--main-highlight-color);
   font-family: 'Chakra Petch', sans-serif;
 }
@@ -138,4 +137,41 @@
 .c_article-par-p {
   color: var(--main-text-color);
   font-size: 14px;
+}
+
+.article-share-links {
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-share-links-b {
+  padding: 5px;
+  background-color: var(--main-background-color);
+}
+
+.article-share-links-b a {
+  margin: 0 10px;
+}
+
+.article-share-link {
+  font-size: 25px;
+  color: var(--neutral-main-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.article-share-link:hover {
+  color: var(--main-highlight-color);
+}
+
+a[alt]:hover:after {
+  content: attr(alt);
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 15px;
+  color: var(--main-text-color);
+  font-size: 16px;
+  padding: 5px 12px;
+  background-color: var(--terciary-background-color);
 }

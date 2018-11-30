@@ -28,6 +28,8 @@ def article_view(request, title):
 
     unique_article = NewsArticle.objects.get(article_slug=title)
 
+    unique_article_category = unique_article.article_category
+
     article_category = unique_article.article_category
     all_category_articles = NewsArticle.objects.filter(article_category=article_category).exclude(article_slug=title).order_by('-id')
 
@@ -45,6 +47,7 @@ def article_view(request, title):
     context = {
         'unique_article': unique_article,
         'all_category_articles': all_category_articles,
+        'article_category': unique_article_category,
     }
 
     response = render(request, 'home/article_view.html', context)

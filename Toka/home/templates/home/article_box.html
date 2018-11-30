@@ -2,7 +2,7 @@
 <div class="article">
 
   <div class="article-photo-div">
-    <div class="article-photo" style="background-image: url({{ Article.article_image.url }})">
+    <div class="article-photo" style="background-image: url({{ Article.article_image }})">
       <img class="png-divider" src="{% static 'home/media/right-article-pattern.png' %}">
       <div class="views-info">
         <p class="views-p">{{ Article.article_views }} {% if Article.article_views == 1%} shikim {% else %} shikime {% endif %}</p>
