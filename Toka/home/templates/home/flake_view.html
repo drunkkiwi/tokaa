@@ -22,17 +22,33 @@
 <div class="c-explan">
   <span class="c-explan-s">LAJMET MË TË SHIKUARA</span>
 
-  <form class="sort-explan-div" action="{% url 'home:flake_view' %}" method="GET">
-    <select class="sort-explan" onchange="this.form.submit()" name="d">
+  <div class="fs-wrapper">
+    <form class="sort-explan-fs" action="{% url 'home:flake_view' %}" method="GET">
+      <span>Brenda ditës</span>
+      <input type="hidden" name="d" value="1">
+    </form>
+
+    <form class="sort-explan-fs" action="{% url 'home:flake_view' %}" method="GET">
+      <span>Brenda javës</span>
+      <input type="hidden" name="d" value="7">
+    </form>
+
+    <form class="sort-explan-fs" action="{% url 'home:flake_view' %}" method="GET">
+      <span>Brenda muajit</span>
+      <input type="hidden" name="d" value="31">
+    </form>
+  </div>
+  <input type="hidden" class="nr_query_lookup" value="{{ nr_query }}">
+
+
+    <!--<select class="sort-explan" onchange="this.form.submit()" name="d">
       <option value="" disabled selected hidden>
         {{ brendawhat }}
       </option>
       <option value="1">Brenda ditës</option>
       <option value="7">Brenda javës</option>
       <option value="31">Brenda muajit</option>
-    </select>
-
-  </form>
+    </select>-->
 </div>
 
 
@@ -45,4 +61,8 @@
 {% include 'home/paginator_display.html' %}
 
 
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="{% static 'home/js/flake_view.js' %}"></script>
 {% endblock %}

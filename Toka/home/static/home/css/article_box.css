@@ -49,6 +49,10 @@
   font-family: 'Chakra Petch', sans-serif;
 }
 
+.views-p i {
+  margin-right: 5px;
+}
+
 .article-info {
   min-height: 100%;
   flex: 4;

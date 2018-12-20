@@ -71,6 +71,13 @@ def category_view(request, category):
         category_full_name = "No articles"
     category_n = category
 
+    if category_full_name is 'Politics':
+        category_full_name = 'Politikë'
+    elif category_full_name is 'Entertainment':
+        category_full_name = 'Argëtim'
+    else:
+        pass
+
     paginator = Paginator(category_articles, 10)
 
     page = request.GET.get('page')
@@ -88,23 +95,14 @@ def category_view(request, category):
 # =============== FLAKE VIEW ==============================
 def flake_view(request):
 
-    brendawhat = 'Më të shikuara brenda'
+    nr_query = '7'
 
     raw_query = request.GET.get('d')
     if request.GET.get('d'):
         Articles = NewsArticle.objects.filter(article_created_at__gte=datetime.now()-timedelta(days=int(raw_query))).order_by('-article_views')
+        nr_query = raw_query
     else:
         Articles = NewsArticle.objects.filter(article_created_at__gte=datetime.now()-timedelta(days=7)).order_by('-article_views')
-
-    if str(raw_query) == str(1):
-        brendawhat = 'Brenda ditës'
-    elif str(raw_query) == str(7):
-        brendawhat = 'Brenda javës'
-    elif str(raw_query) == str(31):
-        brendawhat = 'Brenda muajit'
-    else:
-        pass
-
 
     paginator = Paginator(Articles, 10)
 
@@ -113,8 +111,14 @@ def flake_view(request):
 
     context = {
         'Articles': paginated,
-        'raw_query': raw_query,
-        'brendawhat': brendawhat,
+        'nr_query': nr_query,
     }
 
     return render(request, 'home/flake_view.html', context)
+
+
+#This is a comment from vim
+
+
+def search_view(request):
+    return render(request, 'home/search_view.html')

@@ -5,7 +5,9 @@
     <div class="article-photo" style="background-image: url({{ Article.article_image }})">
       <img class="png-divider" src="{% static 'home/media/right-article-pattern.png' %}">
       <div class="views-info">
-        <p class="views-p">{{ Article.article_views }} {% if Article.article_views == 1%} shikim {% else %} shikime {% endif %}</p>
+        <p class="views-p">
+          <i class="fas fa-binoculars"></i> 
+          {{ Article.article_views }} {% if Article.article_views == 1%} shikim {% else %} shikime {% endif %}</p>
       </div>
     </div>
     <div class="left-line" style="background-color: var(--{{ Article.article_category }}-main-color)"></div>

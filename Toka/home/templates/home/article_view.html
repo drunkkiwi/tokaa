@@ -40,10 +40,12 @@
             {{ unique_article.article_title}}
           </p>
 
-          <span class="author-name">
-            {{ unique_article.article_author}} -- {{ unique_article.article_created_at|timesince }} më parë
+          <span class="article-time">
+            <i class="fas fa-clock"></i>
+            {{ unique_article.article_created_at|timesince }} më parë
           </span>
           <span class="article-views">
+            <i class="fas fa-binoculars"></i>
             {{ unique_article.article_views }} {% if unique_article.article_views == 1 %} shikim {% else %} shikime {% endif %}
           </span>
         </div>
@@ -56,20 +58,27 @@
 
       </div>
 
-      <div class="article-share-links">
-        <span class="article-share-links-b">
+      <div class="article-share-links-wrapper">
 
-          <a alt="Shpërndaje në facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank">
-            <i class="fab fa-facebook-f article-share-link"></i>
-          </a>
-          <a alt="Shpërndaje në twitter" href="https://twitter.com/home?status={{ unique_article.article_title|urlencode }}%20{{ request.build_absolute_uri }}" target="_blank">
-            <i class="fab fa-twitter article-share-link"></i>
-          </a>
-          <a alt="Shpërndaje në reddit" href="http://www.reddit.com/submit?url={{ request.build_absolute_uri }}&title={{ unique_article.article_title|urlencode }}" target="_blank">
-            <i class="fab fa-reddit-alien article-share-link"></i>
-          </a>
+        <div class="article-share-links">
+          <span class="article-share-links-b">
 
-        </span>
+            <a alt="Shpërndaje në facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank">
+              <i class="fab fa-facebook-f article-share-link"></i>
+            </a>
+            <a alt="Shpërndaje në twitter" href="https://twitter.com/home?status={{ unique_article.article_title|urlencode }}%20{{ request.build_absolute_uri }}" target="_blank">
+              <i class="fab fa-twitter article-share-link"></i>
+            </a>
+            <a alt="Shpërndaje në reddit" href="http://www.reddit.com/submit?url={{ request.build_absolute_uri }}&title={{ unique_article.article_title|urlencode }}" target="_blank">
+              <i class="fab fa-reddit-alien article-share-link"></i>
+            </a>
+
+          </span>
+          <span class="article-author">
+            <i class="fas fa-id-badge article-author-ico"></i>
+            {{ unique_article.article_author}}
+          </span>
+        </div>
       </div>
     </div>
 

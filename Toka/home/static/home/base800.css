@@ -31,7 +31,7 @@ body {
 .full-option {
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid var(--lighter-background-color);
+  border-bottom: 1px solid var(--secondary-background-color);
   position: relative;
 }
 
