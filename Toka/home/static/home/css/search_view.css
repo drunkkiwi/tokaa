@@ -1,0 +1,17 @@
+.top-notifier {
+  padding: 10px 20px;
+  background-color: var(--secondary-background-color);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-note {
+  color: var(--main-text-color);
+}
+
+.tp-emp {
+  font-weight: 700;
+  color: var(--main-highlight-color);
+}

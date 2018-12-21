@@ -1,7 +1,8 @@
-from django.shortcuts       import render, HttpResponse
-from .models                import NewsArticle
-from datetime               import datetime, timedelta
-from django.core.paginator  import EmptyPage, PageNotAnInteger, Paginator
+from django.db.models           import Q
+from .models                    import NewsArticle
+from django.shortcuts           import render, HttpResponse
+from datetime                   import datetime, timedelta
+from django.core.paginator      import EmptyPage, PageNotAnInteger, Paginator
 
 # ============= HOME VIEW ===============
 def home(request):
@@ -117,8 +118,29 @@ def flake_view(request):
     return render(request, 'home/flake_view.html', context)
 
 
-#This is a comment from vim
-
-
+# ============== SEARCH VIEW ===================
 def search_view(request):
-    return render(request, 'home/search_view.html')
+    query_raw = request.GET.get('q')
+    news_articles = NewsArticle.objects.all()
+
+    query = query_raw.replace(' ', ', ')
+    query = query.split(', ')
+
+    news_articles_list = []
+
+    for quer in query:
+        if quer:
+            news_articles_list += news_articles.filter(
+                Q(article_title__icontains=quer) |
+                Q(article_body__icontains=quer)
+            ).distinct()
+
+    rendered_articles_list = list(set(news_articles_list))
+    returned_article_num = len(rendered_articles_list)
+
+    context = {
+        'all_articles': rendered_articles_list,
+        'query': query_raw,
+        'returned_article_num': returned_article_num,
+    }
+    return render(request, 'home/search_view.html', context)

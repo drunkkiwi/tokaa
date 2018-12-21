@@ -5,7 +5,7 @@
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
 
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
 }
 
@@ -45,7 +45,7 @@ a:link, a:hover {
   --P-main-color: #304FFE;
   --H-main-color: #E8004D;
   --E-main-color: #00FF98;
-  --S-main-color: #E80C7A;
+  --S-main-color: #FF8B00;
 }
 
 body {
@@ -108,7 +108,6 @@ body {
 }
 
 .nav-icon {
-  color: var(--main-highlight-color);
   color: var(--main-text-color);
   padding-left: 15px;
 }
@@ -123,8 +122,8 @@ body {
 }
 
 .underbar {
-  height: 4px;
-  width: 0%;
+  height: 0px;
+  width: 100%;
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -132,17 +131,61 @@ body {
 }
 
 .full-option:hover .underbar {
-  width: 100%;
+  height: 5px;
 }
 
 .underbar-up {
-  height: 4px;
+  height: 5px;
   width: 100%;
 }
 
 .full-option:hover {
   background-color: var(--secondary-background-color);
 }
+
+.form-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.external-search {
+  background: var(--terciary-background-color);
+  outline: none;
+  border: none;
+  border: 1px solid var(--darker-background-color);
+
+
+  width: 0px;
+  transition: all 0.2s ease-in-out;
+
+  color: var(--main-text-color);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.fos:hover .external-search {
+  width: 200px;
+  padding: 5px 12px 5px 8px;
+  margin-right: 5px;
+}
+
+.sub-button {
+  background: none;
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  border: none;
+}
+
+.search-nav {
+  color: var(--main-text-color);
+  padding: 5px;
+  cursor: pointer;
+}
+
 
 /* ============ Underbar Colors ============*/
 

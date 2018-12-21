@@ -1,9 +1,35 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Search{% endblock %}
+{% block title %}Kërko{% endblock %}
 {% block css %}
-	<link type="text/css" rel="stylesheet" link="{% static 'home/css/search_view.css">
+    <link rel="stylesheet" href="{% static 'home/css/search_view.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/article_box.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/article_box700.css' %}" media="screen and (min-width: 0px) and (max-width: 700px)">
+
+    <style>
+      :root {
+        --main-highlight-color: var(--S-main-color);
+      }
+    </style>
 {% endblock %}
 
 {% block S-underbar %} underbar-up {% endblock %}
+
+{% block body %}
+
+  <div class="top-notifier">
+      <p class="top-note">
+        {% if returned_article_num is not 0 %}
+        <span class="tp-emp">{{ returned_article_num }}</span> {% if returned_article_num is 1 %}post{% else %} poste{% endif %} për kërkimin: <span class="tp-emp">{{ query }}</span>
+        {% else %}
+        nuk ka <span class="tp-emp">asnjë</span> post për këtë kërkesë
+        {% endif %}
+      </p>
+  </div>
+
+  {% for Article in all_articles %}
+    {% include 'home/article_box.html' %}
+  {% endfor %}
+
+{% endblock %}

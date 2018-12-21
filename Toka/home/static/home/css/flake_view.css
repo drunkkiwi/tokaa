@@ -13,18 +13,6 @@
   color: var(--main-highlight-color);
 }
 
-/*.sort-explan {
-  padding: 5px 12px;
-  background-color: var(--main-background-color);
-  color: var(--main-highlight-color);
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-}
-
-.sort-explan option:hover {
-  background-color: var(--terciary-background-color);
-}*/
 
 .fs-wrapper {
   display: flex;
@@ -44,7 +32,6 @@
 
 .fs-filled {
   background-color: var(--darkest-background-color);
-  border-color: var(--lighter-background-color);
   color: var(--main-highlight-color);
 }
 
