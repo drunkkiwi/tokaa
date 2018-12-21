@@ -1,7 +1,0 @@
-- Do search in the main home page -- results then show up in a new page
-- Update github
-- Update heroku
-
-
-main:
-fix navigation bar --- by doing 800css earlier
