@@ -61,3 +61,10 @@ body {
   height: 100%;
   width: 7px;
 }
+
+.external-search {
+  width: 200px;
+  padding: 5px 12px 5px 8px;
+  margin-right: 5px;
+  background-color: var(--darkest-background-color);
+}

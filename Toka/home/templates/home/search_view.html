@@ -28,8 +28,21 @@
       </p>
   </div>
 
+  <div class="top-notifier">
+      <form class="main-form formjs" action="{% url 'home:search_view' %}" method="GET">
+        <input class="main-inp inpjs" type="text" name="q" placeholder="kërko" autocomplete="off">
+        <button class="main-button" type="submit">
+          <i class="fas fa-search main-search"></i>
+        </button>
+      </form>
+  </div>
+
+
   {% for Article in all_articles %}
     {% include 'home/article_box.html' %}
   {% endfor %}
 
+{% endblock %}
+
+{% block js %}
 {% endblock %}

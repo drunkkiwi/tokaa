@@ -1,3 +1,4 @@
+{% if Articles.next_page_number is not 1 %}
 <div class="pag-reference-div">
   <div class="pag-reference">
     {% if Articles.has_previous %}
@@ -25,3 +26,4 @@
     {% endif %}
   </div>
 </div>
+{% endif %}

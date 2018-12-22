@@ -1,7 +1,7 @@
 .top-notifier {
   padding: 10px 20px;
   background-color: var(--secondary-background-color);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,4 +14,28 @@
 .tp-emp {
   font-weight: 700;
   color: var(--main-highlight-color);
+}
+
+.main-inp {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  padding: 5px 12px 5px 8px;
+  border: none;
+  outline: none;
+}
+
+.main-inp:focus {
+  border-bottom: 1px solid var(--main-highlight-color);
+}
+
+.main-button {
+  padding: 3px;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.main-button i {
+  color: var(--main-text-color);
 }

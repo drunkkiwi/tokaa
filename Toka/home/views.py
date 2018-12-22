@@ -105,7 +105,7 @@ def flake_view(request):
     else:
         Articles = NewsArticle.objects.filter(article_created_at__gte=datetime.now()-timedelta(days=7)).order_by('-article_views')
 
-    paginator = Paginator(Articles, 10)
+    paginator = Paginator(Articles, 1)
 
     page = request.GET.get('page')
     paginated = paginator.get_page(page)

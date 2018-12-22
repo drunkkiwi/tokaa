@@ -152,7 +152,7 @@ body {
 }
 
 .external-search {
-  background: var(--terciary-background-color);
+  background: var(--main-background-color);
   outline: none;
   border: none;
   border: 1px solid var(--darker-background-color);
@@ -164,12 +164,19 @@ body {
   color: var(--main-text-color);
   font-weight: 400;
   font-size: 16px;
+
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .fos:hover .external-search {
   width: 200px;
   padding: 5px 12px 5px 8px;
   margin-right: 5px;
+}
+
+.fos:hover {
+  padding-left: 15px;
 }
 
 .sub-button {
